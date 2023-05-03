@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #292929;
+    line-height: 1.6;
+}
+
+.slider {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.slide.current {
+    opacity: 1;
+}
+
+.slide .content {
+    position: absolute;
+    bottom: 90px;
+    left: -600px;
+    opacity: 0;
+    width: 650px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 45px;
+}
+
+.slide.current .content {
+    opacity: 1;
+    transform: translateX(600px);
+    transition: opacity 0.4s ease-in-out;
+}
+
+
+.buttons #prev {
+    position: absolute;
+    top: 50%;
+    left: 55px;
+}
+
+.buttons #next {
+    position: absolute;
+    top: 50%;
+    right: 55px;
+}
+
+.buttons button {
+    cursor: pointer;
+    border: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+    padding: 17px 20px;
+    border-radius: 50%;
+}
+
+.buttons button:hover {
+    background: #fff;
+    color: #292929;
+}
+
+
+/* background images */
+.slide:nth-of-type(1) {
+    background: url('./images/image-1.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-of-type(2) {
+    background: url('./images/image-2.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-of-type(3) {
+    background: url('./images/image-3.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-of-type(4) {
+    background: url('./images/image-4.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-of-type(5) {
+    background: url('./images/image-5.jpg') no-repeat center center/cover;
+}
+
+.slide:nth-of-type(6) {
+    background: url('./images/image-6.jpg') no-repeat center center/cover;
+}
